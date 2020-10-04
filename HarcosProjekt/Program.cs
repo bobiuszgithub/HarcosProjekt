@@ -43,11 +43,15 @@ namespace HarcosProjekt
             }
             r.Close();
 
+
             for (int i = 0; i < harcosok.Count; i++)
             {
                 Console.WriteLine("{0}. {1}", i + 1, harcosok[i]);
+            
             }
-
+            char valasz;
+            Console.WriteLine("mit szeretne csinálni? \na.) Megküzdeni egy harcossal\nb.) Gyógyulni\n c.) Kilépni");
+            valasz = Convert.ToChar(Console.ReadLine());
 
             Console.ReadLine();
         }
