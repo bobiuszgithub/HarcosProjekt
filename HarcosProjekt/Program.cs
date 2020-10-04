@@ -48,7 +48,7 @@ namespace HarcosProjekt
             int kor = 0;
             int hanyadik;
             List<int> sorszamok = new List<int>();
-            for (int i = 1; i < harcosok.Count; i++)
+            for (int i = 1; i < harcosok.Count+1; i++)
             {
                 sorszamok.Add(i);
 
@@ -85,7 +85,6 @@ namespace HarcosProjekt
                     }
                     Console.WriteLine();
                     hanyadik = Convert.ToInt32(Console.ReadLine());
-
                     while (!sorszamok.Contains(hanyadik))
                     {
 

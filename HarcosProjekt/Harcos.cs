@@ -55,7 +55,7 @@
             set
             {
                 eletero = value;
-                if (this.eletero == 0)
+                if (this.eletero <= 0)
                 {
                     this.tapsztalat = 0;
                 }
@@ -84,7 +84,7 @@
             {
                 System.Console.WriteLine("hiba");
             }
-            if (masikHarcos.Eletero == 0 || this.Eletero == 0)
+            if (masikHarcos.Eletero <= 0 || this.Eletero <= 0)
             {
                 System.Console.WriteLine("hiba");
             }
@@ -116,7 +116,7 @@
 
         public void Gyogyul()
         {
-            if (this.Eletero == 0)
+            if (this.Eletero <= 0)
             {
                 this.Eletero = this.MaxEletero;
             }
