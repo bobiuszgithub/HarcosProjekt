@@ -19,9 +19,13 @@ namespace HarcosProjekt
 
             StreamReader r = new StreamReader("harcosok 1.csv");
 
-            // harcosok.Add(new Harcos("Bob1", 1));
-            // harcosok.Add(new Harcos("Bob2", 2));
-            //  harcosok.Add(new Harcos("Bob3", 3));
+            Console.WriteLine("adja meg a harcos nevét: ");
+            string nev = Console.ReadLine();
+            Console.WriteLine("adja meg a státusz sablont(1/2/3)");
+            int statusz = Convert.ToInt32(Console.ReadLine());
+
+            var karakter = new Harcos(nev, statusz);
+            harcosok.Add(karakter);
 
             try
             {
