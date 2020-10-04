@@ -53,7 +53,7 @@ namespace HarcosProjekt
                 sorszamok.Add(i + 1);
 
             }
-
+            sorszamok.Remove(1);
             do
             {
                 kor++;
@@ -87,7 +87,8 @@ namespace HarcosProjekt
 
                     while (!sorszamok.Contains(hanyadik))
                     {
-                        Console.WriteLine("Hányadik harcossal szeretne megküzdeni a listából?");
+
+                        Console.WriteLine("Hibás sorszám!\nHányadik harcossal szeretne megküzdeni a listából?");
                         hanyadik = Convert.ToInt32(Console.ReadLine());
                     }
                     harcosok[0].Megkuzd(harcosok[hanyadik-1]);
@@ -99,7 +100,7 @@ namespace HarcosProjekt
                 }
                 if (valasz == 'c')
                 {
-                    Console.WriteLine("viszlát");
+                    Console.WriteLine("viszlát!");
                 }
                 if (kor%3==0)
                 {
@@ -113,7 +114,7 @@ namespace HarcosProjekt
 
                 }
 
-            } while (valasz != 'c' && harcosok[0].Eletero > 0);
+            } while (valasz != 'c');
 
             Console.ReadLine();
         }
