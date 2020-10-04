@@ -77,7 +77,11 @@
 
         public int MaxEletero { get => alapEletero + szint * 3; }
 
+        public override string ToString()
+        {
+            return string.Format("{0} – LVL:{1} – EXP: {2}/{3} – HP: {4}/{5} – DMG: {6}", this.nev, this.szint, this.tapsztalat, this.SzintLepeshez, this.eletero, this.MaxEletero, this.Sebzes);
 
+        }
 
 
     }
