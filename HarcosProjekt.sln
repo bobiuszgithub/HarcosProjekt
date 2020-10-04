@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarcosProjekt", "HarcosProjekt\HarcosProjekt.csproj", "{AFF5FF5C-0E4C-4FEC-BDA9-EB5F8402E72B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFF5FF5C-0E4C-4FEC-BDA9-EB5F8402E72B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFF5FF5C-0E4C-4FEC-BDA9-EB5F8402E72B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFF5FF5C-0E4C-4FEC-BDA9-EB5F8402E72B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFF5FF5C-0E4C-4FEC-BDA9-EB5F8402E72B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE521A2E-1633-423A-A238-F261FFBBBFD7}
+	EndGlobalSection
+EndGlobal
