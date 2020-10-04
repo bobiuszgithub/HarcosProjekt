@@ -19,16 +19,29 @@ namespace HarcosProjekt
 
             StreamReader r = new StreamReader("harcosok 1.csv");
 
+            // harcosok.Add(new Harcos("Bob1", 1));
+            // harcosok.Add(new Harcos("Bob2", 2));
+            //  harcosok.Add(new Harcos("Bob3", 3));
 
-
-
-           // harcosok.Add(new Harcos("Bob1", 1));
-           // harcosok.Add(new Harcos("Bob2", 2));
-          //  harcosok.Add(new Harcos("Bob3", 3));
-
-            foreach (Harcos item in harcosok)
+            try
             {
-                Console.WriteLine(item);
+                while (!r.EndOfStream)
+                {
+                    string[] s = r.ReadLine().Split(';');
+                    harcosok.Add(new Harcos(s[0], Convert.ToInt32(s[1])));
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            r.Close();
+
+            for (int i = 0; i < harcosok.Count; i++)
+            {
+                Console.WriteLine("{0}. {1}", i + 1, harcosok[i]);
             }
 
 
