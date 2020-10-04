@@ -77,6 +77,45 @@
 
         public int MaxEletero { get => alapEletero + szint * 3; }
 
+
+        public void Megkuzd(Harcos masikHarcos)
+        {
+            if (masikHarcos == this)
+            {
+
+            }
+            if (masikHarcos.Eletero == 0 || this.Eletero == 0)
+            {
+                System.Console.WriteLine("hiba");
+            }
+            else
+            {
+                masikHarcos.Eletero -= this.Sebzes;
+            }
+            if (masikHarcos.Eletero > 0)
+            {
+                this.Eletero -= masikHarcos.Sebzes;
+            }
+            if (masikHarcos.Eletero > 0)
+            {
+                masikHarcos.Tapsztalat += 5;
+            }
+            if (this.Eletero > 0)
+            {
+                this.Tapsztalat += 5;
+            }
+            if (this.Eletero < 0)
+            {
+                masikHarcos.Tapsztalat += 10;
+            }
+            if (masikHarcos.Eletero < 0)
+            {
+                this.Tapsztalat += 10;
+            }
+        }
+
+
+
         public override string ToString()
         {
             return string.Format("{0} – LVL:{1} – EXP: {2}/{3} – HP: {4}/{5} – DMG: {6}", this.nev, this.szint, this.tapsztalat, this.SzintLepeshez, this.eletero, this.MaxEletero, this.Sebzes);
