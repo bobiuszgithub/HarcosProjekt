@@ -45,10 +45,10 @@ namespace HarcosProjekt
 
 
             char valasz;
-            int kor = 1;
+            int kor = 0;
             int hanyadik;
             List<int> sorszamok = new List<int>();
-            for (int i = 0; i < harcosok.Count; i++)
+            for (int i = 1; i < harcosok.Count; i++)
             {
                 sorszamok.Add(i + 1);
 
@@ -85,7 +85,6 @@ namespace HarcosProjekt
                     Console.WriteLine();
                     hanyadik = Convert.ToInt32(Console.ReadLine());
 
-                    sorszamok.Remove(1);
                     while (!sorszamok.Contains(hanyadik))
                     {
                         Console.WriteLine("Hányadik harcossal szeretne megküzdeni a listából?");
@@ -114,7 +113,7 @@ namespace HarcosProjekt
 
                 }
 
-            } while (valasz != 'c');
+            } while (valasz != 'c' && harcosok[0].Eletero > 0);
 
             Console.ReadLine();
         }
