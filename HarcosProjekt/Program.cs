@@ -50,10 +50,9 @@ namespace HarcosProjekt
             List<int> sorszamok = new List<int>();
             for (int i = 1; i < harcosok.Count; i++)
             {
-                sorszamok.Add(i + 1);
+                sorszamok.Add(i);
 
             }
-            sorszamok.Remove(1);
             do
             {
                 kor++;

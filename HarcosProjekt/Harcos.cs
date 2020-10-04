@@ -82,7 +82,7 @@
         {
             if (masikHarcos == this)
             {
-
+                System.Console.WriteLine("hiba");
             }
             if (masikHarcos.Eletero == 0 || this.Eletero == 0)
             {
