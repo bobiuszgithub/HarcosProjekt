@@ -45,7 +45,7 @@ namespace HarcosProjekt
 
 
             char valasz;
-            int kor = 0;
+            int kor = 1;
             int hanyadik;
             List<int> sorszamok = new List<int>();
             for (int i = 0; i < harcosok.Count; i++)
@@ -94,7 +94,25 @@ namespace HarcosProjekt
                     harcosok[0].Megkuzd(harcosok[hanyadik-1]);
 
                 }
+                if (valasz == 'b')
+                {
+                    harcosok[0].Gyogyul();
+                }
+                if (valasz == 'c')
+                {
+                    Console.WriteLine("viszlát");
+                }
+                if (kor%3==0)
+                {
+                    Random rnd = new Random();
 
+                    harcosok[rnd.Next(1, sorszamok.Count + 1)].Megkuzd(harcosok[0]);
+                    for (int i = 0; i < harcosok.Count; i++)
+                    {
+                        harcosok[i].Gyogyul();
+                    }
+
+                }
 
             } while (valasz != 'c');
 
