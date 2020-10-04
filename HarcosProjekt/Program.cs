@@ -66,10 +66,12 @@ namespace HarcosProjekt
 
                 }
                 Console.WriteLine("\nmit szeretne csinálni? \na.) Megküzdeni egy harcossal\nb.) Gyógyulni\nc.) Kilépni");
+                Console.Write("menüpont: ");
                 valasz = Convert.ToChar(Console.ReadLine());
                 while (valasz != 'a' && valasz != 'b' && valasz != 'c')
                 {
                     Console.WriteLine("\nmit szeretne csinálni? \na.) Megküzdeni egy harcossal\nb.) Gyógyulni\nc.) Kilépni");
+                    Console.Write("menüpont: ");
                     valasz = Convert.ToChar(Console.ReadLine());
                 }
 
@@ -77,7 +79,7 @@ namespace HarcosProjekt
                 
                 if (valasz == 'a')
                 {
-                    Console.WriteLine("Hányadik harcossal szeretne megküzdeni a listából?");
+                    Console.WriteLine("\nHányadik harcossal szeretne megküzdeni a listából?");
                     for (int i = 0; i < harcosok.Count; i++)
                     {
                         Console.Write("{0} ", i+1);
@@ -88,7 +90,7 @@ namespace HarcosProjekt
                     while (!sorszamok.Contains(hanyadik))
                     {
 
-                        Console.WriteLine("Hibás sorszám!\nHányadik harcossal szeretne megküzdeni a listából?");
+                        Console.WriteLine("\nHibás sorszám!\nHányadik harcossal szeretne megküzdeni a listából?");
                         hanyadik = Convert.ToInt32(Console.ReadLine());
                     }
                     harcosok[0].Megkuzd(harcosok[hanyadik-1]);
@@ -96,11 +98,12 @@ namespace HarcosProjekt
                 }
                 if (valasz == 'b')
                 {
+                    Console.WriteLine("\ngyógyítottál!");
                     harcosok[0].Gyogyul();
                 }
                 if (valasz == 'c')
                 {
-                    Console.WriteLine("viszlát!");
+                    Console.WriteLine("\nViszlát!");
                 }
                 if (kor%3==0)
                 {
