@@ -44,14 +44,33 @@ namespace HarcosProjekt
             r.Close();
 
 
-            for (int i = 0; i < harcosok.Count; i++)
-            {
-                Console.WriteLine("{0}. {1}", i + 1, harcosok[i]);
-            
-            }
             char valasz;
-            Console.WriteLine("mit szeretne csinálni? \na.) Megküzdeni egy harcossal\nb.) Gyógyulni\n c.) Kilépni");
-            valasz = Convert.ToChar(Console.ReadLine());
+            int kor = 0;
+            do
+            {
+                kor++;
+                Console.WriteLine("\n{0}.Kör\n", kor);
+
+                for (int i = 0; i < harcosok.Count; i++)
+                {
+                    
+                    Console.WriteLine("{0}. {1}", i + 1, harcosok[i]);
+
+                }
+                Console.WriteLine("mit szeretne csinálni? \na.) Megküzdeni egy harcossal\nb.) Gyógyulni\n c.) Kilépni");
+                valasz = Convert.ToChar(Console.ReadLine());
+                while (valasz != 'a' && valasz != 'b' && valasz != 'c')
+                {
+                    Console.WriteLine("mit szeretne csinálni? \na.) Megküzdeni egy harcossal\nb.) Gyógyulni\nc.) Kilépni");
+                    valasz = Convert.ToChar(Console.ReadLine());
+                }
+                if (valasz == 'a')
+                {
+
+                }
+
+
+            } while (valasz != 'c');
 
             Console.ReadLine();
         }
